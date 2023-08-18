@@ -8,6 +8,7 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { SwitchLanguageComponent } from './components/switch-language/switch-language.component';
+import {SelectButtonModule} from 'primeng/selectbutton';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -26,14 +27,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            },
-            defaultLanguage: 'es'
-        })
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        },
+        defaultLanguage: 'es'
+    }),
+    SelectButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
