@@ -1,4 +1,5 @@
-export interface Language {
-    code: string
+export interface LanguageOption {
     name: string,
+    code: string,
+    flagIcon: string
 }

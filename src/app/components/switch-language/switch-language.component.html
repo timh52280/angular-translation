@@ -1,1 +1,8 @@
-<p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" optionLabel="name"></p-selectButton>
+<div class="flex align-items-center justify-content-end">
+    <p class="mr-3">Idioma:</p>
+    <p-selectButton [options]="languageOptions" optionLabel="name" optionValue="code" [(ngModel)] = "defaultLanguageValue" (onOptionClick)="onLanguageSelect($event)">
+        <ng-template let-item pTemplate>
+            <i [class]="item.flagIcon"></i>
+        </ng-template>
+    </p-selectButton>
+</div>
