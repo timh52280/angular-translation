@@ -9,7 +9,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { SwitchLanguageComponent } from './components/switch-language/switch-language.component';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import { MenubarModule } from 'primeng/menubar';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HelloWorldComponent,
-    SwitchLanguageComponent
+    SwitchLanguageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         defaultLanguage: 'es'
     }),
     SelectButtonModule,
+    MenubarModule,
     FormsModule
   ],
   providers: [],
