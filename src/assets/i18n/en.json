@@ -1,5 +1,8 @@
 {
     "HelloWorld": "Hello World!",
     "Idioma": "Language",
-    "Inicio": "Home"
+    "Inicio": "Home",
+    "Validaciones": "Validations",
+    "Organizaciones": "Organizations",
+    "CuentasAcceso": "Access Accounts"
 }
