@@ -1,5 +1,8 @@
-<div class="card">
+<div>
     <p-menubar [model]="menuItems">
+        <ng-template pTemplate="start">
+            <img src="assets/images/logo_00.svg" class="w-6"/>
+        </ng-template>
         <ng-template pTemplate="end">
             <app-switch-language />
         </ng-template>

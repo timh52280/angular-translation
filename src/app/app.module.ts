@@ -12,6 +12,8 @@ import {SelectButtonModule} from 'primeng/selectbutton';
 import { MenubarModule } from 'primeng/menubar';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ButtonModule } from 'primeng/button';
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         defaultLanguage: 'es'
     }),
     SelectButtonModule,
+    ButtonModule,
     MenubarModule,
     FormsModule
   ],
